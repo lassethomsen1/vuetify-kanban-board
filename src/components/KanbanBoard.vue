@@ -4,7 +4,7 @@ import TaskColumn from './TaskColumn.vue';
 import AddTask from "@/components/AddTask.vue";
 
 interface Task {
-  id: number;
+  id: number | string; // string for UUID, number for hardcoded IDs
   title: string;
   description: string;
 }
