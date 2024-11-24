@@ -78,7 +78,6 @@ const handleDragEnd = () => {
 };
 
 const handleDrop = (event: DragEvent, columnId: number) => {
-
   const sourceColumn = columns.value.find(col =>
     col.tasks.some(task => task.id === draggedTask.value!.id)
   );
@@ -92,6 +91,7 @@ const handleDrop = (event: DragEvent, columnId: number) => {
     handleDragEnd();
   }
 };
+
 const addTask = (task: Task) => {
   columns.value[0].tasks.push(task);
 }
