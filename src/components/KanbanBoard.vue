@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import TaskColumn from './TaskColumn.vue';
+import AddTask from "@/components/AddTask.vue";
 
 interface Task {
   id: number;
@@ -91,9 +92,13 @@ const handleDrop = (event: DragEvent, columnId: number) => {
     handleDragEnd();
   }
 };
+const addTask = (task: Task) => {
+  columns.value[0].tasks.push(task);
+}
 </script>
 <template>
   <v-container>
+    <AddTask @submit-task="addTask"/>
     <v-row>
       <TaskColumn
         v-for="column in columns"
