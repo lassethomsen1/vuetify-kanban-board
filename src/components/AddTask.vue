@@ -15,7 +15,11 @@ const rules = {
 
 const submitTask = () => {
   if (task.value.title && task.value.description) { // both fields are required
-    emit("submit-task", {...task.value});
+    emit("submit-task", {
+      id: crypto.randomUUID(),
+      title: task.value.title,
+      description: task.value.description,
+    });
     task.value.title = "";
     task.value.description = "";
   }
