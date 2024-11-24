@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AddTask: typeof import('./src/components/AddTask.vue')['default']
     Detvirker: typeof import('./src/components/detvirker.vue')['default']
     KanbanBoard: typeof import('./src/components/KanbanBoard.vue')['default']
     TaskCard: typeof import('./src/components/TaskCard.vue')['default']
