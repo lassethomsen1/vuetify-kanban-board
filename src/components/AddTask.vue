@@ -20,7 +20,7 @@ const submitTask = () => {
       title: task.value.title,
       description: task.value.description,
     });
-    task.value.title = "";
+    task.value.title = ""; // clear the form
     task.value.description = "";
   }
 
