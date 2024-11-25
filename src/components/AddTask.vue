@@ -23,16 +23,15 @@ const submitTask = () => {
     task.value.title = ""; // clear the form
     task.value.description = "";
   }
-
 };
 </script>
 
 <template>
-  <v-form class="pl-2 pb-2" @submit.prevent="submitTask">
+  <v-form class="pl-2 pt-2" @submit.prevent="submitTask">
     <v-text-field class="w-25" v-model="task.title" placeholder="Enter task title" :rules="[rules.required]"/>
     <v-text-field class="w-25" v-model="task.description" placeholder="Enter task description"
                   :rules="[rules.required]"/>
-    <v-btn type="submit" color="primary">Add Task</v-btn>
+    <v-btn type="submit" color="#381010">Add Task</v-btn>
   </v-form>
 </template>
 
