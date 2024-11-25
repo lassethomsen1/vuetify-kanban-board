@@ -98,7 +98,6 @@ const addTask = (task: Task) => {
 </script>
 <template>
   <v-container>
-    <AddTask @submit-task="addTask"/>
     <v-row>
       <TaskColumn
         v-for="column in columns"
@@ -109,5 +108,6 @@ const addTask = (task: Task) => {
         @dragend="handleDragEnd"
       />
     </v-row>
+    <AddTask @submit-task="addTask"/>
   </v-container>
 </template>
