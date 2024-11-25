@@ -30,7 +30,7 @@ const onDrop = (event: DragEvent) => {
 </script>
 <template>
   <v-col cols="12" sm="6" md="4">
-    <v-card class="mx-2">
+    <v-card color="#f2b8b4" class="mx-2">
       <v-card-title class="font-weight-bold">
         {{ column.title }}
       </v-card-title>
