@@ -1,17 +1,6 @@
 <script setup lang="ts">
 import TaskCard from './TaskCard.vue';
-
-interface Task {
-  id: number;
-  title: string;
-  description: string;
-}
-
-interface Column {
-  id: number;
-  title: string;
-  tasks: Task[];
-}
+import type { Task, Column } from '@/types/types';
 
 const props = defineProps<{ column: Column }>();
 const emit = defineEmits(['drop', 'dragstart', 'dragend']);

@@ -2,18 +2,7 @@
 import {ref} from 'vue';
 import TaskColumn from './TaskColumn.vue';
 import AddTask from "@/components/AddTask.vue";
-
-interface Task {
-  id: string; // string for UUID
-  title: string;
-  description: string;
-}
-
-interface Column {
-  id: number;
-  title: string;
-  tasks: Task[];
-}
+import type { Task, Column } from '@/types/types';
 
 const draggedTask = ref<Task | null>(null);
 const columns = ref<Column[]>([

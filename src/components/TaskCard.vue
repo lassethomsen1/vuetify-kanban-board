@@ -1,10 +1,6 @@
 <script setup lang="ts">
 
-interface Task {
-  id: number;
-  title: string;
-  description: string;
-}
+import type { Task } from '@/types/types';
 
 const props = defineProps<{ task: Task }>();
 const emit = defineEmits(['dragstart', 'dragend']);
